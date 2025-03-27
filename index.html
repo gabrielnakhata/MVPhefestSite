@@ -1,282 +1,304 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <title>hefest mineral</title>
 
-    <!-- SEO Meta Tags-->
-    <meta name="description" content="Site oficial da hefest minerals">
-    <meta name="keywords" content="Hefest Minerals, Slipcoat™, Gaugetec™, antiaderentes industriais, dispositivos de calibração, manuseio de granéis sólidos, soluções industriais sustentáveis, produtos biodegradáveis, eficiência operacional, indústria de mineração, calibração de britadores, redução de custos operacionais, sustentabilidade industrial, soluções personalizadas para mineração">
-    <meta name="author" content="Naktacom by Gabriel Nakhata">
+<head>
+  <meta charset="utf-8">
+  <title>hefest mineral</title>
 
-    <!-- Viewport-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SEO Meta Tags-->
+  <meta name="description" content="Site oficial da hefest minerals">
+  <meta name="keywords"
+    content="Hefest Minerals, Slipcoat™, Gaugetec™, antiaderentes industriais, dispositivos de calibração, manuseio de granéis sólidos, soluções industriais sustentáveis, produtos biodegradáveis, eficiência operacional, indústria de mineração, calibração de britadores, redução de custos operacionais, sustentabilidade industrial, soluções personalizadas para mineração">
+  <meta name="author" content="Naktacom by Gabriel Nakhata">
 
-    <!-- Favicon and Touch Icons-->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#080032">
-    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+  <!-- Viewport-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Vendor Styles-->
-    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
-    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+  <!-- Favicon and Touch Icons-->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#080032">
+  <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
 
-    <!-- Main Theme Styles + Bootstrap-->
-    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+  <!-- Vendor Styles-->
+  <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css" />
 
-    <!-- Page loading styles -->
-    <style>
-      .page-loading {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -webkit-transition: all .4s .2s ease-in-out;
-        transition: all .4s .2s ease-in-out;
-        background-color: #fff;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 9999;
-      }
-      .dark-mode .page-loading {
-        background-color: #0b0f19;
-      }
-      .page-loading.active {
-        opacity: 1;
-        visibility: visible;
-      }
-      .page-loading-inner {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        -webkit-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
-        opacity: 0;
-      }
-      .page-loading.active > .page-loading-inner {
-        opacity: 1;
-      }
-      .page-loading-inner > span {
-        display: block;
-        font-size: 1rem;
-        font-weight: normal;
-        color: #9397ad;
-      }
-      .dark-mode .page-loading-inner > span {
-        color: #fff;
-        opacity: .6;
-      }
-      .page-spinner {
-        display: inline-block;
-        width: 2.75rem;
-        height: 2.75rem;
-        margin-bottom: .75rem;
-        vertical-align: text-bottom;
-        border: .15em solid #b4b7c9;
-        border-right-color: transparent;
-        border-radius: 50%;
-        -webkit-animation: spinner .75s linear infinite;
-        animation: spinner .75s linear infinite;
-      }
-      .dark-mode .page-spinner {
-        border-color: rgba(255,255,255,.4);
-        border-right-color: transparent;
-      }
-      @-webkit-keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-      @keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-    </style>
+  <!-- Main Theme Styles + Bootstrap-->
+  <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
 
-    <!-- Theme mode -->
-    <script>
-      let mode = window.localStorage.getItem('mode'),
-          root = document.getElementsByTagName('html')[0];
-      if (mode !== null && mode === 'dark') {
-        root.classList.add('dark-mode');
-      } else {
-        root.classList.remove('dark-mode');
-      }
-    </script>
-
-    <!-- Page loading scripts -->
-    <script>
-      (function () {
-        window.onload = function () {
-          const preloader = document.querySelector('.page-loading');
-          preloader.classList.remove('active');
-          setTimeout(function () {
-            preloader.remove();
-          }, 1000);
-        };
-      })();
-    </script>
-  </head>
-
-  <!-- Body -->
-  <body><script id="__bs_script__">//<![CDATA[
-  (function() {
-    try {
-      var script = document.createElement('script');
-      if ('async') {
-        script.async = true;
-      }
-      script.src = '/browser-sync/browser-sync-client.js?v=2.28.3'.replace("HOST", location.hostname);
-      if (document.body) {
-        document.body.appendChild(script);
-      }
-    } catch (e) {
-      console.error("Browsersync: could not append script tag", e);
+  <!-- Page loading styles -->
+  <style>
+    .page-loading {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all .4s .2s ease-in-out;
+      transition: all .4s .2s ease-in-out;
+      background-color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 9999;
     }
-  })()
-//]]></script>
+
+    .dark-mode .page-loading {
+      background-color: #0b0f19;
+    }
+
+    .page-loading.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .page-loading-inner {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-transition: opacity .2s ease-in-out;
+      transition: opacity .2s ease-in-out;
+      opacity: 0;
+    }
+
+    .page-loading.active>.page-loading-inner {
+      opacity: 1;
+    }
+
+    .page-loading-inner>span {
+      display: block;
+      font-size: 1rem;
+      font-weight: normal;
+      color: #9397ad;
+    }
+
+    .dark-mode .page-loading-inner>span {
+      color: #fff;
+      opacity: .6;
+    }
+
+    .page-spinner {
+      display: inline-block;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin-bottom: .75rem;
+      vertical-align: text-bottom;
+      border: .15em solid #b4b7c9;
+      border-right-color: transparent;
+      border-radius: 50%;
+      -webkit-animation: spinner .75s linear infinite;
+      animation: spinner .75s linear infinite;
+    }
+
+    .dark-mode .page-spinner {
+      border-color: rgba(255, 255, 255, .4);
+      border-right-color: transparent;
+    }
+
+    @-webkit-keyframes spinner {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spinner {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+  <!-- Theme mode -->
+  <script>
+    let mode = window.localStorage.getItem('mode'),
+      root = document.getElementsByTagName('html')[0];
+    if (mode !== null && mode === 'dark') {
+      root.classList.add('dark-mode');
+    } else {
+      root.classList.remove('dark-mode');
+    }
+  </script>
+
+  <!-- Page loading scripts -->
+  <script>
+    (function () {
+      window.onload = function () {
+        const preloader = document.querySelector('.page-loading');
+        preloader.classList.remove('active');
+        setTimeout(function () {
+          preloader.remove();
+        }, 1000);
+      };
+    })();
+  </script>
+</head>
+
+<!-- Body -->
+
+<body>
+  <script id="__bs_script__">//<![CDATA[
+    (function () {
+      try {
+        var script = document.createElement('script');
+        if ('async') {
+          script.async = true;
+        }
+        script.src = '/browser-sync/browser-sync-client.js?v=2.28.3'.replace("HOST", location.hostname);
+        if (document.body) {
+          document.body.appendChild(script);
+        }
+      } catch (e) {
+        console.error("Browsersync: could not append script tag", e);
+      }
+    })()
+    //]]></script>
 
 
-    <!-- Page loading spinner -->
-    <div class="page-loading active">
-      <div class="page-loading-inner">
-        <div class="page-spinner"></div><span>Loading...</span>
-      </div>
+  <!-- Page loading spinner -->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div><span>Loading...</span>
     </div>
+  </div>
 
-    <!-- Page wrapper for sticky footer -->
-    <main class="page-wrapper">
+  <!-- Page wrapper for sticky footer -->
+  <main class="page-wrapper">
 
-      <!-- Navbar -->
-      <header class="header navbar navbar-expand-lg bg-light shadow-sm fixed-top">
-        <div class="container px-3">
-          <a href="index.html" class="navbar-brand pe-3">
-            <img src="img/logo.svg" width="127" alt="hefest">
-          </a>
-          <div id="navbarNav" class="offcanvas offcanvas-end">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a href="index.html" class="nav-link">Início</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#empresa" class="nav-link">Empresa</a>
-                </li>
-                <li class="nav-item">
-                  <a href="slipcoat.html" class="nav-link">Slipcoat™</a>
-                </li>
-                <li class="nav-item">
-                  <a href="docs/getting-started.html" class="nav-link">Gaugetec™</a>
-                </li>
-              </ul>
-            </div>
+    <!-- Navbar -->
+    <header class="header navbar navbar-expand-lg bg-light shadow-sm fixed-top">
+      <div class="container px-3">
+        <a href="index.html" class="navbar-brand pe-3">
+          <img src="img/logo.svg" width="127" alt="hefest">
+        </a>
+        <div id="navbarNav" class="offcanvas offcanvas-end">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a href="#contato" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
-            <i class="bx bx-phone fs-5 lh-1 me-1"></i>
-            &nbsp;Contato
-          </a>
-        </div>
-      </header>
-
-      <!-- Hero -->
-      <section class="dark-mode vh-100 bg-repeat-0 bg-position-center bg-size-cover overflow-hidden" style="background-image: url(img/bg.jpg);">
-        <div class="container vh-100">
-          <div class="row flex-nowrap vh-100">
-            <div class="col-lg-4 col-md-5 d-flex flex-column text-center text-md-start py-5">
-              <h1 class="display-4 pt-5 pb-2 pb-lg-3 mt-sm-2 mt-lg-3 mb-4">
-                <i class="bx bxs-check-circle bx-md text-white me-2"></i>
-                Manuseio<br>Eficiênte
-              </h1>
-              <p class="lead text-light opacity-70 pb-5 mb-0 mb-md-3">
-                Granéis sólidos minerais,<br>
-                <span class="d-block">alimentícios e concreto.</span>
-              </p>
-              <div class="position-relative d-flex align-items-center justify-content-center justify-content-md-start mb-md-4 mb-lg-5">
-                <div class="btn btn-icon btn-secondary rounded-circle">
-                  <i class="bx bx-chevron-down"></i>
-                </div>
-                <a href="#products" class="nav-link stretched-link text-light fw-normal opacity-80 py-2 px-3" data-scroll data-scroll-offset="70">Produtos</a>
-              </div>
-
-              <!-- View MOBILE -->
-              <div class="d-md-none pt-4">
-                <img src="img/SLIPCOAT.jpg" class="rounded-3 shadow-sm img-fluid" alt="Image">
-              </div>
-            </div>
-
-            <!-- Imagens com Parallax (Desktop/Tablet apenas) -->
-            <div class="d-none d-md-flex flex-shrink-0 align-items-start">
-              <img src="img/1.png" class="rellax d-block flex-shrink-0 mt-n5" width="486" height="1390" alt="Screens" data-rellax-speed="4" data-disable-parallax-down="md">
-              <img src="img/2.png" class="rellax d-block flex-shrink-0 mt-5" width="486" height="1470" alt="Screens" data-rellax-speed="-4" data-disable-parallax-down="md">
-              <img src="img/3.png" class="rellax d-block flex-shrink-0" width="486" height="1480" alt="Screens" data-rellax-speed="4" data-disable-parallax-down="md">
-            </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Início</a>
+              </li>
+              <li class="nav-item">
+                <a href="#empresa" class="nav-link">Empresa</a>
+              </li>
+              <li class="nav-item">
+                <a href="slipcoat.html" class="nav-link">Slipcoat™</a>
+              </li>
+              <li class="nav-item">
+                <a href="gaugetec.html" class="nav-link">Gaugetec™</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="#contato" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank"
+          rel="noopener">
+          <i class="bx bx-phone fs-5 lh-1 me-1"></i>
+          &nbsp;Contato
+        </a>
+      </div>
+    </header>
 
-      <!-- About Slipcoat -->
-      <section id="products" class="container pt-5 mt-2 mt-md-4 mt-lg-5">
-        <div class="row align-items-center pt-xl-3">
-          <div class="col-md-5 text-center text-md-start pb-5">
-            <h1 class="mb-4">
-              <i class="bx bxs-check-circle bx-md text-primary me-2"></i>
-              Slipcoat™<br>Antiaderentes Industriais
+    <!-- Hero -->
+    <section class="dark-mode vh-100 bg-repeat-0 bg-position-center bg-size-cover overflow-hidden"
+      style="background-image: url(img/bg.jpg);">
+      <div class="container vh-100">
+        <div class="row flex-nowrap vh-100">
+          <div class="col-lg-4 col-md-5 d-flex flex-column text-center text-md-start py-5">
+            <h1 class="display-4 pt-5 pb-2 pb-lg-3 mt-sm-2 mt-lg-3 mb-4">
+              <i class="bx bxs-check-circle bx-md text-white me-2"></i>
+              Manuseio<br>Eficiênte
             </h1>
-            <p class="fs-lg pb-lg-3 mb-4">
-              Aumente a produtividade e reduza os custos operacionais com nossa linha de antiaderentes industriais.
+            <p class="lead text-light opacity-70 pb-5 mb-0 mb-md-3">
+              Granéis sólidos minerais,<br>
+              <span class="d-block">alimentícios e concreto.</span>
             </p>
-            <a href="slipcoat.html" class="btn btn-primary shadow-primary btn-lg">Conheça a família Slipcoat™</a>
+            <div
+              class="position-relative d-flex align-items-center justify-content-center justify-content-md-start mb-md-4 mb-lg-5">
+              <div class="btn btn-icon btn-secondary rounded-circle">
+                <i class="bx bx-chevron-down"></i>
+              </div>
+              <a href="#products" class="nav-link stretched-link text-light fw-normal opacity-80 py-2 px-3" data-scroll
+                data-scroll-offset="70">Produtos</a>
+            </div>
+
+            <!-- View MOBILE -->
+            <div class="d-md-none pt-4">
+              <img src="img/SLIPCOAT.jpg" class="rounded-3 shadow-sm img-fluid" alt="Image">
+            </div>
           </div>
-          <div class="col-xl-6 col-md-7 offset-xl-1 pb-4 pb-sm-3 pb-lg-0 mb-4 mb-sm-5 mb-lg-0">
-            <img src="img/aplic-slipcoat.jpg" class="rounded-3 shadow-sm" alt="Image">
+
+          <!-- Imagens com Parallax (Desktop/Tablet apenas) -->
+          <div class="d-none d-md-flex flex-shrink-0 align-items-start">
+            <img src="img/1.png" class="rellax d-block flex-shrink-0 mt-n5" width="486" height="1390" alt="Screens"
+              data-rellax-speed="4" data-disable-parallax-down="md">
+            <img src="img/2.png" class="rellax d-block flex-shrink-0 mt-5" width="486" height="1470" alt="Screens"
+              data-rellax-speed="-4" data-disable-parallax-down="md">
+            <img src="img/3.png" class="rellax d-block flex-shrink-0" width="486" height="1480" alt="Screens"
+              data-rellax-speed="4" data-disable-parallax-down="md">
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- About Gaugetec -->
-      <section class="container pt-5 mt-2 mt-md-4 mt-lg-5">
-        <div class="row align-items-center pt-xl-3">
-          <div class="col-xl-6 col-md-7 pb-4 pb-sm-3 pb-lg-0 mb-4 mb-sm-5 mb-lg-0">
-            <img src="img/gaugetec.jpg" class="rounded-3 shadow-sm" alt="Image">
-          </div>
-          <div class="col-md-5 text-center text-md-start pb-5 offset-xl-1">
-            <h1 class="mb-4">
-              <i class="bx bxs-check-circle bx-md text-primary me-2"></i>
-              Gaugetec™<br>
-              Dispositivo para Calibrar Abertura de Britadores
-            </h1>
-            <p class="fs-lg pb-lg-3 mb-4">Melhore a eficiência de sua planta com nosso dispositivo para calibração de abertura de britadores.</p>
-            <a href="about-v2.html" class="btn btn-primary shadow-primary btn-lg">Conheça o Gaugetec™</a>
-          </div>
+    <!-- About Slipcoat -->
+    <section id="products" class="container pt-5 mt-2 mt-md-4 mt-lg-5">
+      <div class="row align-items-center pt-xl-3">
+        <div class="col-md-5 text-center text-md-start pb-5">
+          <h1 class="mb-4">
+            <i class="bx bxs-check-circle bx-md text-primary me-2"></i>
+            Slipcoat™<br>Antiaderentes Industriais
+          </h1>
+          <p class="fs-lg pb-lg-3 mb-4">
+            Aumente a produtividade e reduza os custos operacionais com nossa linha de antiaderentes industriais.
+          </p>
+          <a href="slipcoat.html" class="btn btn-primary shadow-primary btn-lg">Conheça a família Slipcoat™</a>
         </div>
-      </section>
+        <div class="col-xl-6 col-md-7 offset-xl-1 pb-4 pb-sm-3 pb-lg-0 mb-4 mb-sm-5 mb-lg-0">
+          <img src="img/aplic-slipcoat.jpg" class="rounded-3 shadow-sm" alt="Image">
+        </div>
+      </div>
+    </section>
 
-      <!-- Hero -->
-      <section class="pt-lg-4 pt-5 mt-lg-3">
+    <!-- About Gaugetec -->
+    <section class="container pt-5 mt-2 mt-md-4 mt-lg-5">
+      <div class="row align-items-center pt-xl-3">
+        <div class="col-xl-6 col-md-7 pb-4 pb-sm-3 pb-lg-0 mb-4 mb-sm-5 mb-lg-0">
+          <img src="img/gaugetec.jpg" class="rounded-3 shadow-sm" alt="Image">
+        </div>
+        <div class="col-md-5 text-center text-md-start pb-5 offset-xl-1">
+          <h1 class="mb-4">
+            <i class="bx bxs-check-circle bx-md text-primary me-2"></i>
+            Gaugetec™<br>
+            Dispositivo para Calibrar Abertura de Britadores
+          </h1>
+          <p class="fs-lg pb-lg-3 mb-4">Melhore a eficiência de sua planta com nosso dispositivo para calibração de
+            abertura de britadores.</p>
+          <a href="gaugetec.html" class="btn btn-primary shadow-primary btn-lg">Conheça o Gaugetec™</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero -->
+    <section class="pt-lg-4 pt-5 mt-lg-3">
       <div class="position-relative overflow-hidden">
 
         <!-- Image -->
@@ -285,7 +307,9 @@
             <div class="col-lg-7 position-relative">
               <div class="d-none d-sm-block d-lg-none" style="height: 400px;"></div>
               <div class="d-sm-none" style="height: 300px;"></div>
-              <div class="jarallax position-absolute top-0 start-0 w-100 h-100 rounded-3 rounded-start-0 overflow-hidden" data-jarallax data-speed="0.3">
+              <div
+                class="jarallax position-absolute top-0 start-0 w-100 h-100 rounded-3 rounded-start-0 overflow-hidden"
+                data-jarallax data-speed="0.3">
                 <div class="jarallax-img" style="background-image: url(img/retorno-natureza.jpg);"></div>
               </div>
             </div>
@@ -298,11 +322,15 @@
 
               <!-- Card -->
               <div class="card bg-dark border-light overflow-hidden py-4 px-2 p-sm-4">
-                <span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255,.05);"></span>
+                <span class="position-absolute top-0 start-0 w-100 h-100"
+                  style="background-color: rgba(255,255,255,.05);"></span>
                 <div class="card-body position-relative zindex-5">
                   <p class="fs-xl fw-bold text-primary text-uppercase mb-3">Compromisso</p>
                   <h1 class="display-5 text-light pb-3 mb-3">COM O CLIENTE E COM O PLANETA</h1>
-                  <p class="fs-lg text-light opacity-70 mb-5">Nossos produtos biodegradáveis com certificação ecológica internacional são desenvolvidos para aumentar a eficiência operacional das unidades produtivas de forma sustentável. Oferecemos soluções completas que integram produtos, equipamentos e serviços de forma personalizada para cada cliente.</p>
+                  <p class="fs-lg text-light opacity-70 mb-5">Nossos produtos biodegradáveis com certificação ecológica
+                    internacional são desenvolvidos para aumentar a eficiência operacional das unidades produtivas de
+                    forma sustentável. Oferecemos soluções completas que integram produtos, equipamentos e serviços de
+                    forma personalizada para cada cliente.</p>
                   <div class="d-flex flex-column flex-sm-row">
                     <a href="#pilares" class="btn btn-outline-light btn-lg">
                       Saiba mais sobre a hefest
@@ -320,17 +348,27 @@
     <!-- Hero section -->
     <section id="empresa" class="position-relative pt-5 overflow-hidden">
       <span class="position-absolute top-0 start-0 d-dark-mode-none d-block w-100 h-100 bg-secondary"></span>
-      <span class="position-absolute top-0 start-0 d-dark-mode-block d-none w-100 h-100" style="background: radial-gradient(84.79% 172.9% at 73.31% 31.4%, rgba(99, 135, 241, .1) 0%, rgba(218, 70, 239, .05) 52.47%, rgba(99, 135, 241, .1) 100%);">
-        <span class="d-block w-100 h-100 bg-position-center bg-size-cover bg-repeat-0" style="background-image: url(assets/img/landing/saas-4/hero-bg.png);"></span>
+      <span class="position-absolute top-0 start-0 d-dark-mode-block d-none w-100 h-100"
+        style="background: radial-gradient(84.79% 172.9% at 73.31% 31.4%, rgba(99, 135, 241, .1) 0%, rgba(218, 70, 239, .05) 52.47%, rgba(99, 135, 241, .1) 100%);">
+        <span class="d-block w-100 h-100 bg-position-center bg-size-cover bg-repeat-0"
+          style="background-image: url(assets/img/landing/saas-4/hero-bg.png);"></span>
       </span>
       <div class="container position-relative mt-5 pt-xl-5 pt-md-3 zindex-5">
         <div class="row justify-content-md-start justify-content-center flex-md-nowrap pt-lg-5 pt-4">
-          <div class="col-xl-5 col-md-6 col-sm-10 d-flex flex-column justify-content-between mb-md-5 mb-md-4 mb-3 pb-xl-5 pb-lg-4">
+          <div
+            class="col-xl-5 col-md-6 col-sm-10 d-flex flex-column justify-content-between mb-md-5 mb-md-4 mb-3 pb-xl-5 pb-lg-4">
             <div class="text-md-start text-center">
               <h1 class="display-4 mb-lg-4 mb-3">A empresa</h1>
-              <p class="mb-4 mx-md-0 mx-auto pb-xl-3 pb-lg-2 fs-lg" style="max-width: 30.5rem;">Constituída no ano de 2007, com sede em Belo Horizonte - MG, a Hefest Minerals é especializada em soluções antiaderentes que auxiliam no manuseio de granéis sólidos minerais, produtos alimentícios e concreto.<br>Sempre com o foco no desenvolvimento sustentável da indústria, nossas soluções integram produtos de alta tecnologia, com equipamentos e serviços personalizados.<br>Nossa equipe de especialistas está sempre pronta para atender, cumprindo a legislação e se integrando aos procedimentos internos dos clientes.</p>
+              <p class="mb-4 mx-md-0 mx-auto pb-xl-3 pb-lg-2 fs-lg" style="max-width: 30.5rem;">Constituída no ano de
+                2007, com sede em Belo Horizonte - MG, a Hefest Minerals é especializada em soluções antiaderentes que
+                auxiliam no manuseio de granéis sólidos minerais, produtos alimentícios e concreto.<br>Sempre com o foco
+                no desenvolvimento sustentável da indústria, nossas soluções integram produtos de alta tecnologia, com
+                equipamentos e serviços personalizados.<br>Nossa equipe de especialistas está sempre pronta para
+                atender, cumprindo a legislação e se integrando aos procedimentos internos dos clientes.</p>
             </div>
-            <ul class="list-unstyled row row-cols-2 gy-sm-2 gy-1 gx-sm-4 gx-2 mt-lg-5 mt-4 mx-md-0 mx-auto pt-lg-0 pt-md-2 mb-md-5 mb-4 pb-xl-4 pb-lg-3 pb-md-2 pb-sm-0 pb-2 text-nowrap" style="max-width: 23.625rem;">
+            <ul
+              class="list-unstyled row row-cols-2 gy-sm-2 gy-1 gx-sm-4 gx-2 mt-lg-5 mt-4 mx-md-0 mx-auto pt-lg-0 pt-md-2 mb-md-5 mb-4 pb-xl-4 pb-lg-3 pb-md-2 pb-sm-0 pb-2 text-nowrap"
+              style="max-width: 23.625rem;">
               <li class="col d-flex align-items-start">
                 <i class="bx bx-check-circle me-2 fs-5 text-primary"></i>
                 Mineração
@@ -350,8 +388,10 @@
             </ul>
           </div>
           <div class="col-md-12 offset-xl-1 d-flex mt-lg-4 mb-4">
-            <div class="align-self-center ms-xl-0 ms-md-4 p-lg-4 p-sm-3 p-2 rounded-4 overflow-hidden" style="background: linear-gradient(153.32deg, rgba(255, 255, 255, .3) -65.62%, rgba(255, 255, 255, .1) 83.28%); box-shadow: 0 .25rem 1.5rem -.0625rem rgba(0, 0, 0, .2); backdrop-filter: blur(25px);">
-              <img src="img/empresa.png" width="1122" alt="Layer" class="rounded-4" style="box-shadow: 0 0 7.5rem rgba(0, 0, 0, .1);">
+            <div class="align-self-center ms-xl-0 ms-md-4 p-lg-4 p-sm-3 p-2 rounded-4 overflow-hidden"
+              style="background: linear-gradient(153.32deg, rgba(255, 255, 255, .3) -65.62%, rgba(255, 255, 255, .1) 83.28%); box-shadow: 0 .25rem 1.5rem -.0625rem rgba(0, 0, 0, .2); backdrop-filter: blur(25px);">
+              <img src="img/empresa.png" width="1122" alt="Layer" class="rounded-4"
+                style="box-shadow: 0 0 7.5rem rgba(0, 0, 0, .1);">
             </div>
           </div>
         </div>
@@ -364,13 +404,13 @@
 
     <section id="pilares" class="dark-mode bg-dark position-relative pt-5 pb-4 py-md-5">
       <div class="position-absolute top-0 start-0 w-100 h-100 bg-secondary"></div>
-        <div class="container position-relative zindex-3 py-lg-4 pt-md-2 py-xl-5 mb-lg-4">
-          <div class="row gy-4 mb-xl-3">
-            <div class="col-xl-4 col-lg-5 d-flex flex-column order-2 order-lg-1">
-              <h2 class="h1 mb-md-4 mb-3 py-lg-3 text-lg-start text-center">Pilares</h2>
+      <div class="container position-relative zindex-3 py-lg-4 pt-md-2 py-xl-5 mb-lg-4">
+        <div class="row gy-4 mb-xl-3">
+          <div class="col-xl-4 col-lg-5 d-flex flex-column order-2 order-lg-1">
+            <h2 class="h1 mb-md-4 mb-3 py-lg-3 text-lg-start text-center">Pilares</h2>
 
-              <!-- Swiper slider -->
-              <div class="swiper mx-0" data-swiper-options='{
+            <!-- Swiper slider -->
+            <div class="swiper mx-0" data-swiper-options='{
                 "spaceBetween": 30,
                 "loop": true,
                 "tabs": true,
@@ -380,58 +420,62 @@
                   "nextEl": "#next-industry"
                 }
               }'>
-                <div class="swiper-wrapper text-center text-lg-start">
-                  <!-- Item -->
-                  <div class="swiper-slide" data-swiper-tab="#industry-1">
-                    <h3 class="h4 mb-4">
-                      <a href="#" class="nav-link justify-content-center justify-content-lg-start fw-bold p-0">
-                        Visão
-                        <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
-                      </a>
-                    </h3>
-                    <p>Promover o desenvolvimento sustentável da indústria através da distribuição de tecnologias inovadoras, integradas a uma solução completa que aumente a produtividade e reduza os impactos ambientais.</p>
-                  </div>
-
-                  <!-- Item -->
-                  <div class="swiper-slide" data-swiper-tab="#industry-2">
-                    <h3 class="h4 mb-4">
-                      <a href="#" class="nav-link justify-content-center justify-content-lg-start fw-bold p-0">
-                        Valores
-                        <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
-                      </a>
-                    </h3>
-                    <p>A excelência na prestação de serviços, o respeito pelas pessoas e pelo meio ambiente são a base para o desenvolvimento dos negócios.</p>
-                  </div>
+              <div class="swiper-wrapper text-center text-lg-start">
+                <!-- Item -->
+                <div class="swiper-slide" data-swiper-tab="#industry-1">
+                  <h3 class="h4 mb-4">
+                    <a href="#" class="nav-link justify-content-center justify-content-lg-start fw-bold p-0">
+                      Visão
+                      <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                    </a>
+                  </h3>
+                  <p>Promover o desenvolvimento sustentável da indústria através da distribuição de tecnologias
+                    inovadoras, integradas a uma solução completa que aumente a produtividade e reduza os impactos
+                    ambientais.</p>
                 </div>
-              </div>
 
-              <!-- Slider controls (Prev / next buttons) -->
-              <div class="d-flex justify-content-center justify-content-lg-start mt-2 mt-lg-auto">
-                <button type="button" id="prev-industry" class="btn btn-prev btn-icon btn-sm me-2">
-                  <i class="bx bx-chevron-left"></i>
-                </button>
-                <button type="button" id="next-industry" class="btn btn-next btn-icon btn-sm ms-2">
-                  <i class="bx bx-chevron-right"></i>
-                </button>
+                <!-- Item -->
+                <div class="swiper-slide" data-swiper-tab="#industry-2">
+                  <h3 class="h4 mb-4">
+                    <a href="#" class="nav-link justify-content-center justify-content-lg-start fw-bold p-0">
+                      Valores
+                      <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                    </a>
+                  </h3>
+                  <p>A excelência na prestação de serviços, o respeito pelas pessoas e pelo meio ambiente são a base
+                    para o desenvolvimento dos negócios.</p>
+                </div>
               </div>
             </div>
-            <div class="col-lg-7 offset-xl-1 order-1 order-lg-2">
-              <div class="swiper-tabs">
-                <div id="industry-1" class="swiper-tab active">
-                  <img src="img/visao.jpg" class="rounded-3" alt="Image">
-                </div>
-                <div id="industry-2" class="swiper-tab">
-                  <img src="img/valores.jpg" class="rounded-3" alt="Image">
-                </div>
+
+            <!-- Slider controls (Prev / next buttons) -->
+            <div class="d-flex justify-content-center justify-content-lg-start mt-2 mt-lg-auto">
+              <button type="button" id="prev-industry" class="btn btn-prev btn-icon btn-sm me-2">
+                <i class="bx bx-chevron-left"></i>
+              </button>
+              <button type="button" id="next-industry" class="btn btn-next btn-icon btn-sm ms-2">
+                <i class="bx bx-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-7 offset-xl-1 order-1 order-lg-2">
+            <div class="swiper-tabs">
+              <div id="industry-1" class="swiper-tab active">
+                <img src="img/visao.jpg" class="rounded-3" alt="Image">
+              </div>
+              <div id="industry-2" class="swiper-tab">
+                <img src="img/valores.jpg" class="rounded-3" alt="Image">
               </div>
             </div>
           </div>
         </div>
       </div>
+      </div>
     </section>
 
     <!-- Page content -->
-    <section id="contato" class="bg-size-cover bg-position-bottom-center bg-repeat-0 py-5" style="background-image: url(assets/img/contacts/bg.svg);">
+    <section id="contato" class="bg-size-cover bg-position-bottom-center bg-repeat-0 py-5"
+      style="background-image: url(assets/img/contacts/bg.svg);">
       <div class="container pt-5 pb-lg-4 pb-xl-5">
 
         <!-- Breadcrumb -->
@@ -447,7 +491,7 @@
         <div class="row pt-md-2 pt-lg-5 pb-2 pb-md-4">
           <div class="col-xxl-4 col-xl-5 col-lg-6 pt-3 mt-3">
             <h1 class="h3 mb-2">Fale com um de nossos especialistas.</h1>
-         
+
             <div class="nav d-block lead pt-lg-2">
               <a href="#contato" class="nav-link fw-normal text-decoration p-0">info@hefest.com.br</a>
               <div class="text-nav">+55 31 2533.3434
@@ -492,33 +536,40 @@
                 <img src="img/logo-negativa.svg" width="127" alt="hefest">
               </a>
             </div>
-            <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">R. Hudson, 84 - B. Jardim Canada | Nova Lima | MG | BR<br>
+            <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">R. Hudson, 84 - B. Jardim Canada | Nova Lima | MG |
+              BR<br>
               Horário de funcionamento:<br>
               segunda a sexta-feira<br>
               9:00 às 17:00h
             </p>
-          
+
           </div>
-          
+
         </div>
       </div>
       <div class="container pt-4">
-        <div class="d-flex flex-sm-row flex-column align-items-center justify-content-between text-center text-md-start pt-4 border-top border-light">
+        <div
+          class="d-flex flex-sm-row flex-column align-items-center justify-content-between text-center text-md-start pt-4 border-top border-light">
           <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
             <span class="text-light opacity-50">&copy; All rights reserved.</span>
-            <a class="nav-link d-inline-block p-0" href="https://Naktacom.digital/" target="_blank" rel="noopener">Naktacom</a>
+            <a class="nav-link d-inline-block p-0" href="https://Naktacom.digital/" target="_blank"
+              rel="noopener">Naktacom</a>
           </p>
           <div class="mt-n3 ms-n3">
-            <a href="https://www.facebook.com/hefestmineralsbr/" class="btn btn-icon btn-secondary btn-facebook rounded-circle mt-3 ms-3" target="_blank" rel="noopener">
+            <a href="https://www.facebook.com/hefestmineralsbr/"
+              class="btn btn-icon btn-secondary btn-facebook rounded-circle mt-3 ms-3" target="_blank" rel="noopener">
               <i class="bx bxl-facebook"></i>
             </a>
-            <a href="https://www.instagram.com/hefestminerals/" class="btn btn-icon btn-secondary btn-instagram rounded-circle mt-3 ms-3" target="_blank" rel="noopener">
+            <a href="https://www.instagram.com/hefestminerals/"
+              class="btn btn-icon btn-secondary btn-instagram rounded-circle mt-3 ms-3" target="_blank" rel="noopener">
               <i class="bx bxl-instagram"></i>
             </a>
-            <a href="https://www.youtube.com/channel/UCaWE4ohapJDI5s153zKVoDA" class="btn btn-icon btn-secondary btn-youtube rounded-circle mt-3 ms-3" target="_blank" rel="noopener">
+            <a href="https://www.youtube.com/channel/UCaWE4ohapJDI5s153zKVoDA"
+              class="btn btn-icon btn-secondary btn-youtube rounded-circle mt-3 ms-3" target="_blank" rel="noopener">
               <i class="bx bxl-youtube"></i>
             </a>
-            <a href="https://www.linkedin.com/company/hefest-minerals/" class="btn btn-icon btn-secondary btn-linkedin rounded-circle mt-3 ms-3" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/company/hefest-minerals/"
+              class="btn btn-icon btn-secondary btn-linkedin rounded-circle mt-3 ms-3" target="_blank" rel="noopener">
               <i class="bx bxl-linkedin"></i>
             </a>
           </div>
@@ -542,5 +593,6 @@
 
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>
-  </body>
+</body>
+
 </html>
