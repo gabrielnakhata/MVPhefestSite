@@ -178,7 +178,7 @@
   <main class="page-wrapper">
 
     <!-- Navbar -->
-    <header class="header navbar navbar-expand-lg bg-light shadow-sm fixed-top">
+    <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
       <div class="container px-3">
         <a href="index.html" class="navbar-brand pe-3">
           <img src="img/logo.svg" width="127" alt="hefest">
@@ -217,8 +217,47 @@
       </div>
     </header>
 
-    <!-- Hero -->
-    <section class="dark-mode vh-100 bg-repeat-0 bg-position-center bg-size-cover overflow-hidden"
+     <!-- Hero -->
+     <section class="pt-lg-4 mt-lg-3">
+      <div class="position-relative overflow-hidden">
+
+        <!-- Image -->
+        <div class="container-fluid position-relative position-lg-absolute top-0 start-0 h-100">
+          <div class="row h-100 me-n4 me-n2">
+            <div class="col-lg-7 position-relative">
+              <div class="d-none d-sm-block d-lg-none" style="height: 400px;"></div>
+              <div class="d-sm-none" style="height: 300px;"></div>
+              <div class="jarallax position-absolute top-0 start-0 w-100 h-100 rounded-3 rounded-start-0 overflow-hidden" data-jarallax data-speed="0.3">
+                <div class="jarallax-img" style="background-image: url(img/excelencia-hefest.jpg);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container position-relative zindex-5 pt-lg-5 px-0 px-lg-3">
+          <div class="row pt-lg-5 mx-n4 mx-lg-n3">
+            <div class="col-xl-6 col-lg-7 offset-lg-5 offset-xl-6 pb-5">
+
+              <!-- Card -->
+              <div class="card bg-dark border-light overflow-hidden py-4 px-2 p-sm-4">
+                <span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255,.05);"></span>
+                <div class="card-body position-relative zindex-5">
+                  <h1 class="display-5 text-light pb-3 mb-3">Manuseio Eficiênte</h1>
+                  <p class="fs-lg text-light opacity-70 mb-5">Granéis sólidos minerais, alimentícios e concreto.</p>
+                  <div class="d-flex flex-column flex-sm-row">
+                    <a href="#products" class="btn btn-primary shadow-primary btn-lg mb-3 mb-sm-0 me-sm-4">Produtos</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-lg-4 offset-lg-8 offset-xxl-9 pt-lg-5 mt-xxl-5">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="dark-mode vh-100 bg-repeat-0 bg-position-center bg-size-cover overflow-hidden"
       style="background-image: url(img/bg.jpg);">
       <div class="container vh-100">
         <div class="row flex-nowrap vh-100">
@@ -240,13 +279,11 @@
                 data-scroll-offset="70">Produtos</a>
             </div>
 
-            <!-- View MOBILE -->
             <div class="d-md-none pt-4">
               <img src="img/SLIPCOAT.jpg" class="rounded-3 shadow-sm img-fluid" alt="Image">
             </div>
           </div>
 
-          <!-- Imagens com Parallax (Desktop/Tablet apenas) -->
           <div class="d-none d-md-flex flex-shrink-0 align-items-start">
             <img src="img/1.png" class="rellax d-block flex-shrink-0 mt-n5" width="486" height="1390" alt="Screens"
               data-rellax-speed="4" data-disable-parallax-down="md">
@@ -257,7 +294,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- About Slipcoat -->
     <section id="products" class="container pt-5 mt-2 mt-md-4 mt-lg-5">
