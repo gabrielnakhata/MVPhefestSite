@@ -34,6 +34,7 @@
 
   <!-- Main Theme Styles + Bootstrap-->
   <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+  <link rel="stylesheet" media="screen" href="assets/vendor/img-comparison-slider/dist/styles.css" />
 
   <!-- Page loading styles -->
   <style>
@@ -232,6 +233,110 @@
       <div class="d-md-none" style="height: 400px;"></div>
     </section>
 
+    <!-- Industries (Slider) -->
+    <section class="container py-lg-4 py-xl-5 mt-3 mb-5">
+      <div class="row gy-4 mb-xl-3">
+        <div class="col-xl-4 col-lg-5 d-flex flex-column order-2 order-lg-1">
+          <h2 class="h1 mb-md-4 mb-3 py-lg-3 text-lg-start text-center">Aplicações</h2>
+
+          <!-- Swiper slider -->
+          <div class="swiper mx-0" data-swiper-options='{
+            "spaceBetween": 30,
+            "loop": true,
+            "tabs": true,
+            "autoHeight": true,
+            "autoplay": {
+              "delay": 6000, 
+              "disableOnInteraction": false
+            },
+            "navigation": {
+              "prevEl": "#prev-industry",
+              "nextEl": "#next-industry"
+            }
+          }'>
+            <div class="swiper-wrapper text-center text-lg-start">
+
+              <!-- Item -->
+              <div class="swiper-slide" data-swiper-tab="#industry-1">
+                <h3 class="h4 mb-4">
+                    <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                </h3>
+                <p>Quando utilizado no balão dos caminhões betoneira, gera importantes ganhos de eficiência operacional, como, economia de combustível, Redução no consumo de água, agilidade na limpeza no fim do dia, redução da formação de peso morto e aumento da vida útil do balão</p>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide" data-swiper-tab="#industry-2">
+                <h3 class="h4 mb-4">
+                    <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                </h3>
+                <p>Quando utilizado nos misturadores de concreto, o Slipcoat IRC™, evita a agregação do concreto nas paredes internas, facilita a limpeza dos equipamentos e contribui para o aumento da vida útil do misturador</p>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide" data-swiper-tab="#industry-3">
+                <h3 class="h4 mb-4">
+                    <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                </h3>
+                <p>No cocho das unidades de bombeamento, o uso do Slipcoat IRC™ oferece, redução na aderência do concreto, maior facilidade de limpeza e proteção e durabilidade dos componentes</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider controls (Prev / next buttons) -->
+          <div class="d-flex justify-content-center justify-content-lg-start mt-2 mt-lg-auto">
+            <button type="button" id="prev-industry" class="btn btn-prev btn-icon btn-sm me-2">
+              <i class="bx bx-chevron-left"></i>
+            </button>
+            <button type="button" id="next-industry" class="btn btn-next btn-icon btn-sm ms-2">
+              <i class="bx bx-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-7 offset-xl-1 order-1 order-lg-2">
+
+          <!-- Swiper tabs (Industry images) -->
+          <div class="swiper-tabs">
+
+            <!-- Industry 1 -->
+            <div id="industry-1" class="swiper-tab active">
+              <img src="img/irc-1.png" class="rounded-3" alt="Image">
+            </div>
+
+            <!-- Industry 2 -->
+            <div id="industry-2" class="swiper-tab">
+              <img src="img/irc-2.png" class="rounded-3" alt="Image">
+            </div>
+
+            <!-- Industry 3 -->
+            <div id="industry-3" class="swiper-tab">
+              <img src="img/irc-3.png" class="rounded-3" alt="Image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Light / Dark mode (Comparison slider) -->
+    <section class="d-flex w-100 position-relative overflow-hidden">
+      <div class="position-relative flex-xl-shrink-0 zindex-5 start-50 translate-middle-x" style="max-width: 1920px;">
+        <div class="mx-md-n5 mx-xl-0">
+          <div class="mx-n4 mx-sm-n5 mx-xl-0">
+            <div class="mx-n5 mx-xl-0">
+              <img-comparison-slider class="mx-n5 mx-xl-0">
+                <img slot="first" src="img/pa-sem-mra.jpg" alt="Dak Mode">
+                <img slot="second" src="img/pa-com-mra.jpg" alt="Light Mode">
+                <div slot="handle" style="width: 36px;">
+                  <svg class="text-primary shadow-primary rounded-circle" width="36" height="36" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 36 36"><g><circle fill="currentColor" cx="18" cy="18" r="18"/></g><path fill="#fff" d="M22.2,17.2h-8.3v-3.3L9.7,18l4.2,4.2v-3.3h8.3v3.3l4.2-4.2l-4.2-4.2V17.2z"/></svg>
+                </div>
+              </img-comparison-slider>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-absolute top-0 start-0 w-50 h-100 bg-dark"></div>
+      <div class="position-absolute top-0 end-0 w-50 h-100" style="background-color: #f3f6ff;"></div>
+    </section>
+
     <section class="container text-center pb-5 mb-3 mb-md-4 mb-lg-5">
       <h2 class="h1 pt-1 mb-4">Aplicação Slipcoat IRC™</h2>
       <div class="row justify-content-center mb-md-2 mb-lg-5">
@@ -266,6 +371,7 @@
     <!-- LightGallery JS -->
     <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
     <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+    <script src="assets/vendor/img-comparison-slider/dist/index.js"></script>
 
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>
