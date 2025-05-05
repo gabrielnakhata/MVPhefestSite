@@ -31,6 +31,7 @@
   <!-- Vendor Styles-->
   <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
   <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" media="screen" href="assets/vendor/img-comparison-slider/dist/styles.css" />
 
   <!-- Main Theme Styles + Bootstrap-->
   <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
@@ -315,7 +316,28 @@
       </div>
     </section>
 
-    <section class="container text-center pb-5 mb-3 mb-md-4 mb-lg-5">
+    <!-- Light / Dark mode (Comparison slider) -->
+    <section class="d-flex w-100 position-relative overflow-hidden">
+      <div class="position-relative flex-xl-shrink-0 zindex-5 start-50 translate-middle-x" style="max-width: 1920px;">
+        <div class="mx-md-n5 mx-xl-0">
+          <div class="mx-n4 mx-sm-n5 mx-xl-0">
+            <div class="mx-n5 mx-xl-0">
+              <img-comparison-slider class="mx-n5 mx-xl-0">
+                <img slot="first" src="img/sem-mra.png" alt="Dak Mode">
+                <img slot="second" src="img/com-mra.png" alt="Light Mode">
+                <div slot="handle" style="width: 36px;">
+                  <svg class="text-primary shadow-primary rounded-circle" width="36" height="36" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 36 36"><g><circle fill="currentColor" cx="18" cy="18" r="18"/></g><path fill="#fff" d="M22.2,17.2h-8.3v-3.3L9.7,18l4.2,4.2v-3.3h8.3v3.3l4.2-4.2l-4.2-4.2V17.2z"/></svg>
+                </div>
+              </img-comparison-slider>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-absolute top-0 start-0 w-50 h-100 bg-dark"></div>
+      <div class="position-absolute top-0 end-0 w-50 h-100" style="background-color: #f3f6ff;"></div>
+    </section>
+
+    <section class="container text-center py-lg-4 py-xl-5 mt-3 mb-5">
       <h2 class="h1 pt-1 mb-4">Aplicação Slipcoat MRA™</h2>
       <div class="row justify-content-center mb-md-2 mb-lg-5">
         <div class="col-lg-6 col-md-8">
@@ -349,6 +371,7 @@
     <!-- LightGallery JS -->
     <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
     <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+    <script src="assets/vendor/img-comparison-slider/dist/index.js"></script>
 
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>
