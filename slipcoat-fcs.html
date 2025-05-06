@@ -232,21 +232,86 @@
       <div class="d-md-none" style="height: 400px;"></div>
     </section>
 
-    <section class="container text-center pb-5 mb-3 mb-md-4 mb-lg-5">
-      <h2 class="h1 pt-1 mb-4">Aplicação Slipcoat FCS™</h2>
-      <div class="row justify-content-center mb-md-2 mb-lg-5">
-        <div class="col-lg-6 col-md-8">
-          <p class="fs-lg text-muted mb-lg-0">Vagões - EFVM</p>
+    <!-- Industries (Slider) -->
+    <section class="container py-lg-4 py-xl-5 mt-3 mb-5">
+      <div class="row gy-4 mb-xl-3">
+        <div class="col-xl-4 col-lg-5 d-flex flex-column order-2 order-lg-1">
+          <h2 class="h1 mb-md-4 mb-3 py-lg-3 text-lg-start text-center">Aplicações</h2>
+
+          <!-- Swiper slider -->
+          <div class="swiper mx-0" data-swiper-options='{
+            "spaceBetween": 30,
+            "loop": true,
+            "tabs": true,
+            "autoHeight": true,
+            "autoplay": {
+              "delay": 6000, 
+              "disableOnInteraction": false
+            },
+            "navigation": {
+              "prevEl": "#prev-industry",
+              "nextEl": "#next-industry"
+            }
+          }'>
+            <div class="swiper-wrapper text-center text-lg-start">
+
+              <!-- Item -->
+              <div class="swiper-slide" data-swiper-tab="#industry-1">
+                <h3 class="h4 mb-4">
+                    <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                </h3>
+                <p>O Antiaderente para superfícies em contato com alimentos mais utilizado nos Estados Unidos. Inerte, biodegradável, não afeta sabor ou cor dos alimentos. Forma uma película que impede a formação de peso morto e protege superfícies metálicas contra oxidação, auxiliando no manuseio, transporte e armazenamento de grãos.</p>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide" data-swiper-tab="#industry-2">
+                <h3 class="h4 mb-4">
+                    <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                </h3>
+                <p>Ideal para aplicações em colheitadeiras, vagões ferroviários, tanques e chutes de transferência. Reduz drasticamente o acúmulo de resíduos e o tempo de limpeza, otimizando o desempenho no campo durante o processo de colheita.</p>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide" data-swiper-tab="#industry-3">
+                <h3 class="h4 mb-4">
+                    <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                </h3>
+                <p>Pode ser aplicado também em superfícies de tratores, caixas de ração e equipamentos de nutrição animal. Promove segurança, facilita a higienização e preserva as características do alimento.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider controls (Prev / next buttons) -->
+          <div class="d-flex justify-content-center justify-content-lg-start mt-2 mt-lg-auto">
+            <button type="button" id="prev-industry" class="btn btn-prev btn-icon btn-sm me-2">
+              <i class="bx bx-chevron-left"></i>
+            </button>
+            <button type="button" id="next-industry" class="btn btn-next btn-icon btn-sm ms-2">
+              <i class="bx bx-chevron-right"></i>
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="position-relative rounded-3 overflow-hidden mb-lg-3">
-        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center zindex-5">
-          <a href="https://www.youtube.com/watch?v=r5Zbj6gbN44" class="btn btn-video btn-icon btn-xl stretched-link bg-white" data-bs-toggle="video">
-            <i class="bx bx-play"></i>
-          </a>
+        <div class="col-lg-7 offset-xl-1 order-1 order-lg-2">
+
+          <!-- Swiper tabs (Industry images) -->
+          <div class="swiper-tabs">
+
+            <!-- Industry 1 -->
+            <div id="industry-1" class="swiper-tab active">
+              <img src="img/fcs-1.png" class="rounded-3" alt="Image">
+            </div>
+
+            <!-- Industry 2 -->
+            <div id="industry-2" class="swiper-tab">
+              <img src="img/fcs-2.png" class="rounded-3" alt="Image">
+            </div>
+
+            <!-- Industry 3 -->
+            <div id="industry-3" class="swiper-tab">
+              <img src="img/fcs-3.png" class="rounded-3" alt="Image">
+            </div>
+          </div>
         </div>
-        <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
-        <img src="img/Spray-slip.png" alt="Cover image">
       </div>
     </section>
 
