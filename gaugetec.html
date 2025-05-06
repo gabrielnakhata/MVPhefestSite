@@ -254,6 +254,78 @@
       </div>
     </section>
 
+    <!-- Industries (Slider) -->
+    <section class="container py-lg-4 py-xl-5 mt-3 mb-5">
+      <div class="row gy-4 mb-xl-3">
+        <div class="col-xl-4 col-lg-5 d-flex flex-column order-2 order-lg-1">
+          <h2 class="h1 mb-md-4 mb-3 py-lg-3 text-lg-start text-center">Benefícios do Dispositivo GAUGETEC™</h2>
+
+          <!-- Swiper slider -->
+          <div class="swiper mx-0" data-swiper-options='{
+            "spaceBetween": 30,
+            "loop": true,
+            "tabs": true,
+            "autoHeight": true,
+            "autoplay": {
+              "delay": 6000, 
+              "disableOnInteraction": false
+            },
+            "navigation": {
+              "prevEl": "#prev-industry",
+              "nextEl": "#next-industry"
+            }
+          }'>
+            <div class="swiper-wrapper text-center text-lg-start">
+
+              <!-- Item -->
+              <div class="swiper-slide" data-swiper-tab="#industry-1">
+                <h3 class="h4 mb-4">
+                    <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                </h3>
+                <p>Ecologicamente correto, 10 vezes mais leve, fácil de manusear e estocar, não exige descarte especial, sem componentes tóxicos.</p>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide" data-swiper-tab="#industry-2">
+                <h3 class="h4 mb-4">
+                    <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                </h3>
+                <p>Não projeta partículas, não contamina a produção nem o meio ambiente, não inflamável, não perigoso.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Slider controls (Prev / next buttons) -->
+          <div class="d-flex justify-content-center justify-content-lg-start mt-2 mt-lg-auto">
+            <button type="button" id="prev-industry" class="btn btn-prev btn-icon btn-sm me-2">
+              <i class="bx bx-chevron-left"></i>
+            </button>
+            <button type="button" id="next-industry" class="btn btn-next btn-icon btn-sm ms-2">
+              <i class="bx bx-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-7 offset-xl-1 order-1 order-lg-2">
+
+          <!-- Swiper tabs (Industry images) -->
+          <div class="swiper-tabs">
+
+            <!-- Industry 1 -->
+            <div id="industry-1" class="swiper-tab active">
+              <img src="img/gaugetec-foto.png" class="rounded-3" alt="Image">
+            </div>
+
+            <!-- Industry 2 -->
+            <div id="industry-2" class="swiper-tab">
+              <img src="img/gaugetec-helice.png" class="rounded-3" alt="Image">
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Back to top button -->
     <a href="#top" class="btn-scroll-top" data-scroll>
       <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
