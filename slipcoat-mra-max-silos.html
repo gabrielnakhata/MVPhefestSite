@@ -424,4 +424,104 @@
     <script src="assets/js/theme.min.js"></script>
 </body>
 
+<a class="whatsapp-link" id="whatsapp-link" target="_blank">
+  <i class="bx bxl-whatsapp"></i>
+</a>
+
+<style>
+  .whatsapp-link {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 70px;
+    right: 14px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 0px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 1px 1px 2px #888;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4px;
+  }
+
+  .whatsapp-link::before {
+    content: "";
+    position: absolute;
+    color: #00aced;
+    width: 46px;
+    height: 46px;
+    border: 2px solid #fff;
+    /* border-radius: 50%; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .fa-whatsapp {
+    margin-top: 8px;
+    font-style: normal;
+  }
+
+  .whatsapp-link:hover::before {
+    color: #fff;
+  }
+</style>
+
+<script>
+  function chamarWhatsApp(isMobile) {
+    // Verifica se o dispositivo é móvel
+    // var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    var whatsappLink = document.querySelector('.ui-to-top-whats.fa-brands.fa-whatsapp');
+
+    if (isMobile) {
+      var elemento = document.querySelector('.ui-to-top-whats.fa-brands.fa-whatsapp').href = 'https://wa.me/5531988526188';
+    } else {
+      var elemento = document.querySelector('.ui-to-top-whats.fa-brands.fa-whatsapp').href = 'https://web.whatsapp.com/send?phone=5531988526188';
+    }
+    whatsappLink.target = '_blank';
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var elemento = document.querySelector('.ui-to-top-whats.fa-brands.fa-whatsapp');
+
+    if (elemento) {
+      elemento.addEventListener('click', function () {
+        chamarWhatsApp();
+      });
+    } else {
+      console.log("Elemento com a classe 'ui-to-top-whats fa-brands fa-whatsapp' não encontrado!");
+    }
+  });
+
+  function chamarWhatsApp() {
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    // Verifica se o dispositivo é móvel
+    if (isMobile) {
+      document.getElementById('whatsapp-link').href = 'https://wa.me/5531988526188';
+    } else {
+      document.getElementById('whatsapp-link').href = 'https://web.whatsapp.com/send?phone=5531988526188';
+    }
+  }
+
+  // Chame a função para configurar o link do WhatsApp
+  chamarWhatsApp();
+
+  function changeButtonColor(button) {
+
+    button.addEventListener('click', function () {
+      setTimeout(function () {
+        if (button.classList.contains('collapsed')) {
+          button.style.backgroundColor = '#fff';
+          button.style.color = '';
+        }
+      }, 300); // Temporizador para esperar a transição do accordion
+    });
+  }
+
+</script>
+
 </html>
