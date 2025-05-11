@@ -1,16 +1,19 @@
 <?php
-// Substitua pelo seu e-mail real
 $para = "info@hefest.com.br";
 
 // Coleta os dados
-$nome = strip_tags($_POST['nome']);
-$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+$nome     = strip_tags($_POST['nome']);
+$email    = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+$empresa  = strip_tags($_POST['empresa']);
+$telefone = strip_tags($_POST['telefone']);
 $mensagem = strip_tags($_POST['mensagem']);
 
-// Assunto e corpo
+// Monta o corpo do e-mail
 $assunto = "Mensagem enviada pelo site Hefest";
-$corpo = "Nome: $nome\n";
-$corpo .= "E-mail: $email\n\n";
+$corpo  = "Nome: $nome\n";
+$corpo .= "E-mail: $email\n";
+$corpo .= "Empresa: $empresa\n";
+$corpo .= "Telefone: $telefone\n\n";
 $corpo .= "Mensagem:\n$mensagem";
 
 // Cabeçalhos
