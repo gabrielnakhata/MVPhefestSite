@@ -379,7 +379,6 @@
     width: 46px;
     height: 46px;
     border: 2px solid #fff;
-    /* border-radius: 50%; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -397,8 +396,6 @@
 
 <script>
   function chamarWhatsApp(isMobile) {
-    // Verifica se o dispositivo é móvel
-    // var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     var whatsappLink = document.querySelector('.ui-to-top-whats.fa-brands.fa-whatsapp');
 
     if (isMobile) {
@@ -424,7 +421,6 @@
   function chamarWhatsApp() {
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-    // Verifica se o dispositivo é móvel
     if (isMobile) {
       document.getElementById('whatsapp-link').href = 'https://wa.me/5531988526188';
     } else {
@@ -432,7 +428,6 @@
     }
   }
 
-  // Chame a função para configurar o link do WhatsApp
   chamarWhatsApp();
 
   function changeButtonColor(button) {
@@ -443,7 +438,7 @@
           button.style.backgroundColor = '#fff';
           button.style.color = '';
         }
-      }, 300); // Temporizador para esperar a transição do accordion
+      }, 300);
     });
   }
 
